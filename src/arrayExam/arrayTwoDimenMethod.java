@@ -27,8 +27,29 @@ public class arrayTwoDimenMethod {
 		int[] numArr4 = Arrays.copyOfRange(numArr, 2,4);
 		System.out.println(Arrays.toString(numArr4)); // [2, 3]
 		
+		// 배열 변환
+		int[] intArr = {1,2,3,4,5};
+		char[] charArr1 = {'a', 'b', 'c', 'd'};
+		char[] charArr2;
+		/*
+		문자열의 배치를 변환하는 중간과정 중 char배열을 사용해야 
+		온전한 문자열을 가지고 올 수 있는 것 같다.
+		*/
+		// char배열 -> 문자열(1)
+		String str1 = new String(charArr1);
+		System.out.println(str1); // abcd
+		// char배열 -> 문자열(2)
+		str1 = String.valueOf(charArr1);
+		System.out.println(str1); // abcd
 		
-	
+		// 배열 -> 문자열, 문자열배열 또한 변환되며 []를 붙여서 변환된다.
+		str1 = Arrays.toString(intArr);
+		System.out.println(str1); // [1, 2, 3, 4, 5]
+		
+		// 문자열 -> char배열
+		charArr2 = str1.toCharArray();
+		System.out.println(charArr2);  // [1, 2, 3, 4, 5]
+		
 	}
 
 }
